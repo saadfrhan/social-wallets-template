@@ -1,4 +1,6 @@
 import './globals.css'
+import WagmiRainbowKitProvider from './provider'
+import '@rainbow-me/rainbowkit/styles.css';
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <WagmiRainbowKitProvider>
+          {children}
+        </WagmiRainbowKitProvider>
+      </body>
     </html>
   )
 }
