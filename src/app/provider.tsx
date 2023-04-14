@@ -31,12 +31,12 @@ export default function WagmiRainbowKitProvider({
     {
       groupName: 'Social',
       wallets: [
-        googleWallet({ options: { projectId: process.env.PROJECT_ID! } }),
-        facebookWallet({ options: { projectId: process.env.PROJECT_ID! } }),
-        githubWallet({ options: { projectId: process.env.PROJECT_ID! } }),
-        discordWallet({ options: { projectId: process.env.PROJECT_ID! } }),
-        twitchWallet({ options: { projectId: process.env.PROJECT_ID! } }),
-        twitterWallet({ options: { projectId: process.env.PROJECT_ID! } })
+        googleWallet({ options: { projectId: process.env.NEXT_PUBLIC_PROJECT_ID! } }),
+        facebookWallet({ options: { projectId: process.env.NEXT_PUBLIC_PROJECT_ID! } }),
+        githubWallet({ options: { projectId: process.env.NEXT_PUBLIC_PROJECT_ID! } }),
+        discordWallet({ options: { projectId: process.env.NEXT_PUBLIC_PROJECT_ID! } }),
+        twitchWallet({ options: { projectId: process.env.NEXT_PUBLIC_PROJECT_ID! } }),
+        twitterWallet({ options: { projectId: process.env.NEXT_PUBLIC_PROJECT_ID! } })
       ],
     },
     {
@@ -44,11 +44,11 @@ export default function WagmiRainbowKitProvider({
       wallets: [
         enhanceWalletWithAAConnector(
           metaMaskWallet({ chains }),
-          { projectId: process.env.PROJECT_ID! }
+          { projectId: process.env.NEXT_PUBLIC_PROJECT_ID! }
         ),
         enhanceWalletWithAAConnector(
           walletConnectWallet({ chains }),
-          { projectId: process.env.PROJECT_ID! }
+          { projectId: process.env.NEXT_PUBLIC_PROJECT_ID! }
         ),
       ]
     },
